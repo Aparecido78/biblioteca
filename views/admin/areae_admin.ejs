@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <link rel="stylesheet" href="/admin/admin.css" />
+  <title>Área Admin</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <span class="area_admin">Área do Admin</span>
+      <h1 class="biblioteca">Biblioteca</h1>
+      <a class="sair" href="/sair">Sair</a>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <div class="top-actions">
+      <a class="cadastrar_categoria" href="/pagina/cadastro/categoria">Cadastrar Categoria</a>
+      <a class="cadastrar_livro" href="/pagina/cadastro/livro">Cadastro de Livro</a>
+    </div>
+
+    <div class="categoria_categoria">
+      <% categoria.forEach(cate => { %>
+        <form action="/pegar/livro/categoria" method="post">
+          <input type="hidden" name="CategoriaId" value="<%= cate.id %>">
+          <button class="livro" type="submit"><%= cate.nome %></button>
+        </form>
+      <% }) %>
+    </div>
+  
+    <% if (typeof livros_categoria !== 'undefined' && livros_categoria.length > 0) { %>
+      <div class="categoria">
+        <% livros_categoria.forEach(livro => { %>
+          <% if (livro.foto) { %>
+            <div class="categoria_livro">
+              <img class="foto_livro" src="/<%= livro.foto %>" alt="<%= livro.titulo %>">
+              <p>Título: <%= livro.titulo %></p>
+
+              <form action="/editar/livros/<%= livro.id %>" method="post">
+                <button class="Editar_livro" type="submit">Editar</button>
+              </form>
+
+              <form action="/excluir/livro/<%= livro.id %>" method="post">
+                <button class="excluir_livro" type="submit">Excluir</button>
+              </form>
+
+              <form action="/pagina/cadastrar/pagina/livro" method="post">
+                <input type="hidden" name="LivroId" value="<%= livro.id %>">
+                <button class="cadastrar_pagina" type="submit">Cadastrar Página</button>
+              </form>
+            </div>
+          <% } %>
+        <% }) %>
+      </div>
+    <% } %>
+  </main>
+
+  <footer class="footer">
+    <p>Biblioteca &copy; 2024</p>
+  </footer>
+</body>
+</html>

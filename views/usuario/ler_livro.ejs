@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/usuario/ler_livro.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="nav">
+        <img class="imag" src="/imagem/Livro em branco sobre madeira3.png">
+        <a class="boa"> Boa Leitura </a>
+        <a class="sair"  href="/sair">Sair</a>
+        <a class="a_nav_emprestimo_home" href="/usuario/home">Home</a>
+
+
+    </nav>
+    <h1> Pagina de livros</h1>
+    <img class="imagem_livro_ler" src="/<%= Livro.foto  %>">  
+     <h2 class="titulo_pagina_livro"> <%= Livro.titulo %> </h2>
+     <div class="container_borda">
+        <div class="pagina_livro_container">
+           <div class="pagina_livro_texto">
+            <% paginas_livros.forEach(pagina => { %>
+                <div class="pagina_livro">
+                    <p><%= pagina.texto %></p>
+                </div>
+            <% }) %>
+            </div>
+           
+        </div>
+    </div>
+    
+        <footer class="footer">
+
+        </footer>
+ 
+</body>
+</html>

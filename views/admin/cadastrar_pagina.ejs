@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/admin/cadastrar_pagina.css">
+    <title>Document</title>
+</head>
+<body>
+      <br>
+     <nav class="navbar">
+    <div class="nav-inner">
+      <span class="area_admin">Área do Admin</span>
+      <h1 class="biblioteca">Editar Livros</h1>
+       <a class="voltar" href="/voltar/pagina/inicial">voltar</a>
+      <a class="sair" href="/sair">Sair</a>
+    </div>
+  </nav> 
+<br>
+    <form class="form" action="/cadastrar/pagina/livro" method="post">
+      <h1>Cadastrar pagina de livro</h1>
+        <input type="hidden" name="LivroId" value="<%= LivroId %>">
+        <textarea class="textarea" name="texto" cols="30" rows="10" placeholder="Conteúdo da página"></textarea>
+        
+        <button class="butao_cadastrar_pagina" type="submit">Cadastrar Página</button>
+    </form>
+
+     <footer class="footer">
+    <p>Biblioteca &copy; 2024</p>
+  </footer>
+    
+</body>
+</html>

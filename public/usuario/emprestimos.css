@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;    
+}
+
+.body{
+   background-color: white; 
+}
+
+.nav_emprestimos{
+    background-color: #362525; 
+    border: solid 2px black;
+    width: 100%;
+    height: 100px;
+}
+
+.imag_emprestimos{
+    width: 10%;
+    height: 70px;
+    margin-top: 15px;
+    
+}
+
+.h1_nav_emprestimo{
+    height: 60px;
+    background: black;
+    width: 30%;
+    margin-left: 35%;
+    margin-top: -63px;
+    color: white;
+    font-family: arial;
+    text-align: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 40px;
+    box-shadow: 0 0 15px black;
+}
+
+.emprestimo_titulo{
+    background: greenyellow;
+}
+
+
+li{
+    list-style: none;
+}
+.imag_emprestimo{
+    width: 30%;
+    height: 170px;
+    margin:10px;
+    border-radius: 20px;
+}
+
+
+.titulo_emprestimo{
+    display:flex;
+    position: relative;
+    color: white;
+    font-size: 20px;
+    font-family: arial;
+    margin-left: 50%;
+    font-size: 30px;
+    bottom: 164px;
+}
+
+.titulo_livro{
+    bottom: 163px;
+    margin-left: 55%;
+    position: relative;
+    color: white;
+    display:flex;
+     font-size: 20px;
+}
+.autor{
+    font-size: 30px;
+    bottom: 160px;
+    margin-left: 50%;
+    position: relative;
+    color: white;
+    display:flex;
+
+}
+.emprestimo_autor{
+    top:35px;
+     position: relative;
+    color: white;
+    display:flex;
+    right: 60px;
+    font-size: 20px;
+
+
+}
+
+.data_emprestimo_livro{
+    
+    position: relative;
+    color: white;
+    display:flex;
+    bottom: 135px;
+    margin-left: 50%;
+
+}
+
+.hora_emprestimos_livro{
+     position: relative;
+    color: white;
+    display:flex;
+    bottom: 120px;
+    margin-left: 50%;
+
+}
+.footer_emprestimo{
+    width: 100%;
+    height: 60px;
+    background: #362525;
+    bottom: 0;
+    position: fixed;
+}
+.p_footer_emprestimo{
+    color: white;
+    text-align: center;
+    font-family: arial;
+    font-size: 20px;
+    padding-top: 15px;
+}
+
+.ler_livro_butao{
+    text-align: center;
+    font-size: 35px;
+    position: absolute;
+    box-shadow: 0 0 7px greenyellow;
+    background: green;
+    margin-top: -100px;
+    width: 20%;
+    height: 40px;
+    color: white;
+    margin-left: 40px;
+    
+    border-radius: 20px;
+
+}
+.emprestimo_container{
+    width: 50%;
+    height: 300px;
+    background: #362525;
+    margin-left: 15%;
+    border-radius: 20px;
+}
+.sair{
+    position: relative;
+    display: flex;
+    margin-left: 95%;
+    color: white;
+    font-size: 20px;
+    font-size: 30px;
+    margin-top: -35px;
+}
+.a_nav_emprestimo_home{
+     position: relative;
+    display: flex;
+    margin-left: 90%;
+    color: white;
+    font-size: 20px;
+    font-size: 30px;
+    margin-top: -60px;
+    text-decoration: none;
+
+}

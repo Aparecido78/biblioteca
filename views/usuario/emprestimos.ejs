@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/usuario/emprestimos.css">
+    <title>Document</title>
+
+</head>
+<body class="body">
+    <nav class="nav_emprestimos">
+         <a><img class="imag_emprestimos" src="/imagem/Livro em branco sobre madeira3.png">
+        
+        </a>  <h1 class="h1_nav_emprestimo"> Emprestimo </h1> 
+        <div>
+        <a class="a_nav_emprestimo_home" href="/usuario/home">Home</a>
+        <a class="sair" href="/sair">sair</a>
+        </div>
+    </nav>
+
+        <br><br>
+ 
+        <% if(emprestimos_usuario.length === 0) { %>
+            <p>Você não tem empréstimos.</p>
+        <% } else { %>
+            <ul>
+                <% emprestimos_usuario.forEach(emprestimo => { %>
+                    <br>
+                    <li class="emprestimo_container">
+                        <img class="imag_emprestimo" src="/<%= emprestimo.Livro.foto %>" alt="Capa do Livro" width="100"><br>
+                        <strong class="titulo_emprestimo">Título do Livro</strong> <a class="titulo_livro"><%= emprestimo.Livro.titulo %></a><br>
+                        <div class="autor">
+                        <strong>Autor:</strong> <a class="emprestimo_autor"><%= emprestimo.Livro.autor %> </a><br>
+                        </div>
+                        
+                        <div class="data_emprestimo_livro">
+                            <strong class="data_emprestimo">Data do Empréstimo:</strong> 
+                            <a class="data_emprestimo_info">
+                            <%= new Date(emprestimo.Livro.data).toLocaleDateString() %>
+                            </a><br>
+                        </div>
+                        <div class="hora_emprestimos_livro">
+                            <strong class="hora_emprestimo">Hora do Empréstimo:</strong> 
+                            <a class="hora_emprestimo_info">
+                            <%= new Date(emprestimo.Livro.data).toLocaleTimeString() %>
+                            </a><br>
+                        </div>
+                    <form action="/ler_livro_butao" method="post">
+                        <input type="hidden" name="LivroId" value="<%= emprestimo.Livro.id %>">
+                       <button class="ler_livro_butao">Ler Livro</button>
+                    </form>
+  <br>
+                    </li>
+                   
+                <% }) %>
+            </ul>
+        <% } %>
+
+</div>
+<div id="livro_paginas" class="livro_paginas">
+
+</div>
+<footer class="footer_emprestimo">
+    <p class="p_footer_emprestimo">Biblioteca Online &copy; 2024</p>
+</footer>
+    
+</body>
+</html>

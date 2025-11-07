@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/usuario/usuario.css">
+    <title>Document</title>
+
+</head>
+<body id="body" class="body_principal">
+    <nav class="nav"> 
+        <a><img class="imag" src="/imagem/Livro em branco sobre madeira3.png"></a>  
+        <h1 class="h1_nav"> Os mellhores livros de sucesso </h1> 
+        <img id="butao_casa_menu" class="imag_casa" src="/imagem/Ícone de Casa Minimalista.png" width="50px">
+    </nav>
+    <br><br><br>
+
+    <div id="menu_principal" class="menu">
+        <a id="menu_principal_x" class="menu_principal_x">X</a>
+        <div class="menu_principal_div">
+            <a class="butao_emprestimos" href="/meus/emprestimos">Meus Empréstimos</a>
+            <br><br>
+            <a>perfil</a>
+        </div>
+    </div>
+
+    <img class="body" src="/imagem/biblioteca.png">
+    
+<div class="container">
+ <hr>
+    <div class="categoria_nome">
+      
+     
+      
+        <% Categorias.forEach(cate =>{ %>
+            <p></p>
+            <form action="/usuario/pegar/livro/<%= cate.id %>" method="post">
+                <button class="categoria_nome_butao" type="submit"><%= cate.nome %></button>       
+            </form>
+        <% })  %>
+    </div>
+   
+    <br><br>
+
+    <div class="livro_por_categoria">
+        <% if( typeof livro_cate !== 'undefined' && livro_cate.length > 0 ){ %>
+            <% livro_cate.forEach(livro =>{ %>
+                <div class="livro_cate">
+                    <br>
+                    <img class="imagen_livro_categoria" style="border-radius: 5px;" src="/<%= livro.foto %>" width="240">
+                    <p class="livro_titulo"><%= livro.titulo %></p>
+
+                    <form action="/faze/emprestimo/<%= livro.id %>" method="post">
+                        <button class="butao_emprestimo" type="submit"> Fazer Empréstimo</button>
+                    </form>
+                    <br><br><br>
+                
+                    <form action="/ver/mais/sobre/produto/<%= livro.id %>" method="post">
+                        <button class="ver_mais_informacoes" type="submit">ver mais</button>
+                    </form>
+
+                </div>
+            <% }) %>
+        <% } %>
+
+        <% if( typeof livros_ver_mais !== 'undefined' && livros_ver_mais ){  %>
+            <div class="livro_cate_ver_mais">
+                <div class="livro_ver_mais_topo">
+                    <img class="imagen_livro_categoria_ver_mais" src="/<%= livros_ver_mais.Livros.foto %>">
+                    
+                    <div class="livro_ver_mais_info">
+                        <h2 style="color: white;" class="livro_titulo_ver_mais"><%= livros_ver_mais.titulo %></h2>
+                        <p class="nome_do_autor">Autor: <%= livros_ver_mais.autor %></p>
+
+                        <div class="acoes_ver_mais">
+                            <form action="/faze/emprestimo/<%= livros_ver_mais.id %>" method="post">
+                                <button class="butao_emprestimo_ver_mais" type="submit">Fazer Empréstimo</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="descricao_div">
+                    <h3 class="a_descricao">Resumo</h3>
+                    <p class="descricao"><%= livros_ver_mais.descricao %></p>
+                </div>
+            </div>
+        <% } %>
+
+    </div>
+</div>
+
+<footer>
+</footer>
+
+<script> 
+  const butao_casa_menu = document.getElementById("butao_casa_menu");
+  const menu_principal = document.getElementById("menu_principal");
+  const menu_principal_x = document.getElementById("menu_principal_x");
+
+  butao_casa_menu.addEventListener("click",()=>{
+    menu_principal.style.display = "flex"
+  })
+
+  menu_principal_x.addEventListener("click",()=>{
+    menu_principal.style.display = "none"
+  })
+</script>
+
+</body>
+</html>

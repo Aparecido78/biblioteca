@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    width: 100%;
+    height: 70px;
+     background: #362525;
+     position:fixed;
+}
+.footer{
+     position:fixed;
+    bottom:0;
+    width: 100%;
+    height: 70px;
+     background: #362525;
+}
+.a_nav_emprestimo_home{
+    position: relative;
+    display: flex;
+    margin-left: 95%;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    margin-top: -34px;
+      width:45px;
+}
+.boa{
+    margin-left: 45%;
+    font-size:30px;
+    color:white;
+    margin-top: -54px;
+    position: relative;
+    display: flex;
+
+}
+.imag{
+    margin-top: 10px;
+    width: 5%;
+    height: 60px;
+    margin-left: 10px;
+
+}
+.sair{
+    width:45px;
+     position: relative;
+    display: flex;
+    margin-left: 87%;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    margin-top: -44px;
+
+}
+.imagem_livro_ler{
+    width: 20%;
+    height: 200px;
+    margin-left: 15%;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.pagina_livro_container{
+    width: 90%;
+    height: 430px;
+    border: 2px solid black;
+    margin-left: 5%;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: white;
+   
+    overflow-y: scroll;
+}
+.titulo_pagina_livro{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 25%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: black;
+    box-shadow: 0 0 black;
+    
+  
+
+}
+.container_borda{
+    text-shadow: 2px 2px 2px grey;
+    border: 2px solid black;
+    width: 50%;
+    height: auto;
+    margin-left: 2.5%;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: rgb(226, 216, 216);
+    box-shadow: 3px 3px 3px black;
+    padding:  10px;
+    box-shadow: 0 0 20px black;
+
+}
+
+.pagina_livro{
+    text-shadow: none;
+    font-size: 20px;
+}
+
+.container_opiniao{
+    text-align: center;
+    align-items: center;
+    width: 20%;
+    height: 465px;
+    display: flex;
+    position: relative;
+    margin-left: 60%;
+    margin-top: -25%;
+    border: solid;
+    flex-direction: column;
+      background: #4e3838;
+    border-radius: 20px;
+    color:white;
+    box-shadow:  0 0 20px black;
+    border:none;
+}
+
+.textarea_opiniao{
+    border:solid;
+    width: 80%;
+    height: 290px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    box-shadow: 2px 2px 2px grey;
+    
+}
+
+.botao_enviar_opiniao{
+    background: greenyellow;
+    color:white;
+     box-shadow: 2px 2px 2px black;
+    width: 150px;
+    height: 40px;
+    font-size:25px;
+    
+    border-radius: 35px;
+}
+.pagina_livro_texto{
+    width: 95%;
+     height: 435px;
+     margin-left:15px;
+
+}

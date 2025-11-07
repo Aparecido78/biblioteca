@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/admin/Editar.css">
+    <title >Editar Livros </title>
+</head>
+<body>
+    <br>
+     <nav class="navbar">
+    <div class="nav-inner">
+      <span class="area_admin">Área do Admin</span>
+      <h1 class="biblioteca">Editar Livros</h1>
+       <a class="voltar" href="/voltar/pagina/inicial">voltar</a>
+      <a class="sair" href="/sair">Sair</a>
+    </div>
+  </nav>
+<br><br>
+    
+     <form class="form" action="/salvar/alteracao/editar/livro/<%= livro_editar.id%>" method="post" enctype="multipart/form-data">
+
+        <label>Titulo</label>
+        <input type="text" name="titulo" value="<%= livro_editar.titulo%>" placeholder="digite seu titulo" required>
+        <br>
+        <label>Autor</label>
+        <input type="text" name="autor" value="<%= livro_editar.autor%>" placeholder="digite o nome do autor do livro">
+        <br>
+        <label>Data</label>
+        <input type="date" name="data" value="<%= livro_editar.data%>"  placeholder="Data">
+        <br>
+        <label>Descricao:</label>
+        <input type="text" name="descricao" value="<%= livro_editar.descricao%>" placeholder="descricao">
+        <br>
+        <label>Foto:</label> 
+        <input type="file" accept="file" value="<%= livro_editar.foto%>" name="foto">
+        <br>
+<br><br><br>
+        <button class="salvar_butao" type="submit"> Editar </button>
+
+    </form>
+
+     <footer class="footer">
+    <p>Biblioteca &copy; 2024</p>
+  </footer>
+    
+</body>
+</html>

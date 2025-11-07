@@ -1,0 +1,56 @@
+
+#interresses{
+    position: relative;
+  border-radius: 20px;
+  color: white;
+  width: 50%;
+  height: 790px;
+  background: #362525;
+  
+  z-index: 1000;
+  left: 30%;
+  position: fixed;
+  top: 12%;
+  text-align: center;
+  display: none;
+  overflow: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.livro_cate_interrese{
+   
+   
+    width: 70%;
+    height: 350px;
+    left: 50%;
+    margin: 10px;
+    margin-left: 30px;
+}
+.imagen_livro_categoria_interrese{
+    width: 55%;
+    height: 177px;
+    
+    border-radius: 10px;
+}
+.butao_emprestimo_interresse{
+    width: 50%;
+    height: 40px;
+    background: greenyellow;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+     font-size: 20px;
+}
+.ver_mais_interresse{
+    width: 50%;
+    height: 40px;
+    background: gray;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
