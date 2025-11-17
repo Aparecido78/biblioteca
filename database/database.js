@@ -1,21 +1,23 @@
-const { Sequelize } = require("sequelize");
+const Sequelize = require("sequelize")
+const connectar = new Sequelize("biblioteca_express","root","478432",{
 
-const sequelize = new Sequelize(process.env.DATABASE_URL, {
-  dialect: "postgres",
-  dialectOptions: {
-    ssl: { require: true, rejectUnauthorized: false }
-  }
-});
+    host:"localhost",
+    dialect:"mysql"
 
-async function testar() {
-  try {
-    await sequelize.authenticate();
-    console.log("Banco conectado com sucesso!");
-  } catch (err) {
-    console.log("Erro ao conectar com o banco:", err);
-  }
+})
+
+
+async function testar(){
+
+
+try{
+    await connectar.authenticate()
+    console.log("banco connectado com sucesso")
+
+}catch(err){
+    console.log("erro, algo deu errado na connecção com o banco",err)
+
+}
 }
 
-testar();
-
-module.exports = sequelize;
+module.exports = connectar
