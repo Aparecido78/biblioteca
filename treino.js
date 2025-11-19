@@ -1,6 +1,7 @@
 const express = require("express")
 const app = express()
 const port = 4000
+require("dotenv").config();
 
 const Paginas  = require("./livros/pagina_livro")
 const Livros = require("./livros/livros")
@@ -14,6 +15,15 @@ const Emprestimo = require("./emprestimos/emprestimo")
 
 const router_usuario = require("./usuarios/codigo_usuario") 
 const rota_admin = require("./admin/codigo_admin")
+
+connectar.sync()
+.then(() => {
+    console.log("tabelas criadas com sucesso")
+    
+}).catch((err) => {
+    console.log("Erro ao criar tabelas",err)
+    
+});
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
