@@ -24,4 +24,4 @@ try{
 
 
 
-module.exports = connectar
+module.exports = sequelize

@@ -1,0 +1,1 @@
+postgresql://meu_postgres_dev_user:YJOhXxBV6ioHJzx2XEpkcpFlLgDTr1jJ@
