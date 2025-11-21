@@ -27,7 +27,7 @@
                 <% emprestimos_usuario.forEach(emprestimo => { %>
                     <br>
                     <li class="emprestimo_container">
-                        <img class="imag_emprestimo" src="/public/<%= emprestimo.Livro.foto %>" alt="Capa do Livro" width="100"><br>
+                        <img class="imag_emprestimo" src="/<%= emprestimo.Livro.foto %>" alt="Capa do Livro" width="100"><br>
                         <strong class="titulo_emprestimo">Título do Livro</strong> <a class="titulo_livro"><%= emprestimo.Livro.titulo %></a><br>
                         <div class="autor">
                         <strong>Autor:</strong> <a class="emprestimo_autor"><%= emprestimo.Livro.autor %> </a><br>
